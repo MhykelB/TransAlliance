@@ -29,7 +29,7 @@ const AppPage = () => {
     </Box>
   );
 };
-const FirstPage = ({}) => {
+const FirstPage = () => {
   return (
     <Box //first page wrapper
       sx={{
@@ -114,7 +114,7 @@ const NavBarItem = ({ text }) => {
     </Typography>
   );
 };
-const FirstPageWelcomeTextComponent = ({}) => {
+const FirstPageWelcomeTextComponent = () => {
   return (
     <Flex
       sx={{

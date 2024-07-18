@@ -223,8 +223,7 @@ const SocialIcon = ({ name }) => {
         height: "auto",
         outline: "1px solid #122038",
         borderRadius: 50,
-        padding: 15,
-        padding: name === "facebook" ? 12 : 12,
+        padding: name === "facebook" ? 12 : 15,
         paddingRight: name === "facebook" ? 15 : 12,
         paddingLeft: name === "facebook" ? 15 : 12,
       }}
