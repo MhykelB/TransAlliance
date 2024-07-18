@@ -10,7 +10,6 @@ export const ThirdPage = () => {
   return (
     <Stack
       sx={{
-        border: "2px solid black",
         pt: 10,
       }}
     >

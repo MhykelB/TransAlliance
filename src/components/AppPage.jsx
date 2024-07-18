@@ -62,7 +62,13 @@ const FirstPage = () => {
           <NavBarItem text={"News & Insights"} />
           <NavBarItem text={"Contact Us"} />
           <Button
-            // variant="contained"
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/company/transalliancegroup/?originalSubdomain=ng",
+                "_blank",
+                "noopener,noreferrer"
+              );
+            }}
             sx={{
               fontWeight: 600,
               borderRadius: 3,

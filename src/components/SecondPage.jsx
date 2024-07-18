@@ -4,22 +4,29 @@ import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Flex from "../customMuiComponents/Flex";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { Padding } from "@mui/icons-material";
 
 export const SecondPage = () => {
   return (
     <Box
       sx={{
-        background: "#F6F4F4",
+        background:
+          "linear-gradient(to top left, rgba(91,251,148,1) 0%, rgba(245,245,245,1) 40%)",
         pt: 18,
-        // px: 12,
         zIndex: 1,
         position: "relative",
-        border: "5px solid black",
       }}
     >
       <SecondPagePartnersIcon />
-      <SecondPageText />
-      <PictureLine1 />
+      <Box
+        sx={{
+          px: 12,
+        }}
+      >
+        <SecondPageText />
+        <PictureLine1 />
+        <PictureLine2 />
+      </Box>
       <Footer />
     </Box>
   );
@@ -83,7 +90,7 @@ const SecondPageText = () => {
     <Flex
       sx={{
         mt: 5,
-        columnGap: 45,
+        columnGap: 42,
         alignItems: "flex-start",
         // justifyContent: "space-between",
         ml: "auto",
@@ -108,7 +115,7 @@ const SecondPageText = () => {
           fontSize={21}
           sx={{
             width: "600px",
-            mr: 3,
+            mr: 4,
           }}
         >
           Transalliance Group. Money Out and Money In solutions give our
@@ -143,9 +150,12 @@ const PictureLine1 = () => {
           />
         </Flex>
         <PersonCardImage
+          bottom={-40}
+          left={40}
           textsx={{
             px: 2,
-            py: 1,
+            py: 1.5,
+            fontSize: 14,
           }}
           textWidth={"fit-content"}
           width={"300px"}
@@ -154,18 +164,102 @@ const PictureLine1 = () => {
         />
       </Stack>
       <PersonCardImage
+        bottom={-40}
+        left={-50}
         sx={{
           ml: "auto",
-          width: "400px",
-          background: "black",
+          mr: 6,
+          textAlign: "start",
+          width: "350px",
+          background:
+            "linear-gradient(to right, rgba(90,175,135,1) 16%, rgba(211,189,0,1) 100%)",
+          borderRadius: 5,
           mt: 8,
         }}
+        cardsx={{ transform: "translateX(-50px)" }}
         textWidth={"350px"}
         width={"500px"}
         name={"SEPA2"}
         text={"Customer portal for live transaction monitoring"}
       />
     </Flex>
+  );
+};
+const PictureLine2 = () => {
+  return (
+    <Stack gap={8}>
+      <Flex
+        mt={7}
+        ml={38}
+        sx={{
+          columnGap: 7,
+        }}
+      >
+        <Stack gap={5}>
+          <PersonCardImage
+            sx={{
+              width: "300px",
+              height: "300px",
+              background: "white",
+              borderRadius: 5,
+            }}
+            cardsx={{
+              transform: "translateY(-40px)",
+            }}
+            top={60}
+            left={-100}
+            textsx={{
+              px: 2,
+              py: 2,
+              // fontSize: 16,
+            }}
+            textWidth={"fit-content"}
+            width={"300px"}
+            name={"SEPA3"}
+            text={"Danish FSA regulated"}
+          />
+        </Stack>
+        <PersonCardImage
+          bottom={-30}
+          left={50}
+          sx={{
+            textAlign: "start",
+            width: "300px",
+            height: "300px",
+            background: "white",
+            borderRadius: 5,
+          }}
+          cardsx={{ transform: "translateX(39px)", marginTop: 60 }}
+          width={"230px"}
+          name={"SEPA4"}
+          text={"90+ currencies served"}
+          textsx={{
+            px: 2,
+            py: 1.5,
+            borderRadius: 3,
+            // background: "pink",
+            fontWeight: 400,
+          }}
+        />
+      </Flex>
+      <Flex sx={{ ...button2Props }}>
+        <Typography alignSelf={"flex-end"} fontWeight={"bold"} fontSize={20}>
+          Learn More
+        </Typography>
+        <KeyboardArrowRightIcon
+          sx={{
+            p: 0.3,
+            background: "rgba(91, 251, 148, 1)",
+            borderRadius: 4,
+            "&:hover": {
+              opacity: 0.8,
+              cursor: "pointer",
+              background: "rgba(242, 218, 5, 1)",
+            },
+          }}
+        />
+      </Flex>
+    </Stack>
   );
 };
 const PersonCardImage = ({
@@ -178,6 +272,7 @@ const PersonCardImage = ({
   width,
   textWidth,
   textsx,
+  cardsx,
   sx,
 }) => {
   return (
@@ -188,7 +283,12 @@ const PersonCardImage = ({
       }}
     >
       <CardMedia
-        style={{ width: width, height: "auto", borderRadius: 15 }}
+        style={{
+          width: width,
+          height: "auto",
+          borderRadius: 15,
+          ...cardsx,
+        }}
         component="img"
         image={`/images/${name}.png`}
         alt={`${name}`}
@@ -200,10 +300,11 @@ const PersonCardImage = ({
         sx={{
           textAlign: "center",
           width: textWidth,
-          outline: "1.5px solid white",
-          background: "rgba(255, 255, 255, 0.7)",
+          outline: "1.2px solid rgba(255, 255, 255, .6)",
+          background: "rgba(255, 255, 255, .6)",
+          backdropFilter: "blur(10px)",
           py: 0.6,
-          borderRadius: 2,
+          borderRadius: 3,
           columnGap: 10,
           position: "absolute",
           top: top,
@@ -227,53 +328,58 @@ const Footer = () => {
         width: "inherit",
         alignSelf: "flex-end",
         columnGap: 0,
-        mt: 35,
+        mt: 10,
         alignItems: "flex-end",
       }}
     >
       <Stack
         sx={{
           width: "25rem",
-          pl: "8rem",
+          pl: "10rem",
 
           alignItems: "flex-end",
-          pt: 14,
+          pt: 8,
           pb: 3,
           background: "#5FB083",
         }}
       >
-        <Typography
-          fontSize={30}
-          // width={400}
-          sx={{
-            lineHeight: 1.2,
-          }}
-        >
-          {" "}
-          The human-powered payments network{" "}
-        </Typography>
-        <Typography fontSize={14} mt={1} maxWidth={320}>
-          Driven by a team of over 200 global payments experts with absolute
-          dedication to solving our customers’ most complex cross-border
-          payments challenges.
-        </Typography>
-        <Flex sx={{ ...buttonProps, py: 1, borderRadius: 2 }}>
-          <Typography alignSelf={"flex-end"} fontWeight={"bold"} fontSize={20}>
-            Learn More
-          </Typography>
-          <KeyboardArrowRightIcon
+        <Stack>
+          <Typography
+            fontSize={30}
             sx={{
-              p: 0.3,
-              background: "black",
-              color: "#5AAF87",
-              borderRadius: 4,
-              "&:hover": {
-                opacity: 0.6,
-                cursor: "pointer",
-              },
+              lineHeight: 1.2,
             }}
-          />
-        </Flex>
+          >
+            {" "}
+            The human-powered payments network{" "}
+          </Typography>
+          <Typography fontSize={15} mt={2} maxWidth={320} fontWeight={600}>
+            Driven by a team of over 200 global payments experts with absolute
+            dedication to solving our customers’ most complex cross-border
+            payments challenges.
+          </Typography>
+          <Flex sx={{ ...buttonProps, py: 1, borderRadius: 2 }}>
+            <Typography
+              alignSelf={"flex-end"}
+              fontWeight={"bold"}
+              fontSize={20}
+            >
+              Learn More
+            </Typography>
+            <KeyboardArrowRightIcon
+              sx={{
+                p: 0.3,
+                background: "black",
+                color: "#5AAF87",
+                borderRadius: 4,
+                "&:hover": {
+                  opacity: 0.6,
+                  cursor: "pointer",
+                },
+              }}
+            />
+          </Flex>
+        </Stack>
       </Stack>
 
       <Stack
@@ -285,13 +391,12 @@ const Footer = () => {
           borderTopLeftRadius: "4rem",
           background:
             "linear-gradient(to bottom right, rgba(93,103,84,1) 3%, rgba(20,35,60,1) 25%, rgba(20,35,60,1) 58%, rgba(20,35,60,1) 95%);",
-          outline: "1px solid black",
         }}
       >
         <CardMedia
           style={{
             maxWidth: "8%",
-            height: "auto",
+            // height: "auto",
             alignSelf: "flex-end",
             marginRight: 25,
           }}
@@ -306,7 +411,8 @@ const Footer = () => {
             marginLeft: 60,
             marginRight: 30,
             marginTop: 5,
-            marginBottom: 50,
+            marginBottom: 30,
+            transform: "translateY(-30px)",
           }}
           component="img"
           image={"/images/SEPA5.png"}
@@ -326,4 +432,15 @@ const buttonProps = {
   px: 2,
   pr: 4,
   mt: 4,
+};
+const button2Props = {
+  alignSelf: "flex-end",
+  width: "fit-content",
+  columnGap: 4,
+  background: "linear-gradient(to left, rgba(36, 52, 62, .85), #5AAF87)",
+  borderRadius: 4,
+  py: 2,
+  px: 2.5,
+  mt: 4,
+  mr: 8,
 };
