@@ -3,7 +3,7 @@ import { Checkbox, Divider, Stack, TextField } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Flex from "../customMuiComponents/Flex";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 
 export const FifthPage = () => {
   return (
@@ -90,7 +90,7 @@ const LadyAndForm = () => {
             >
               Submit
             </Typography>
-            <KeyboardArrowRightIcon
+            <KeyboardArrowRightRoundedIcon
               sx={{
                 p: 0.3,
                 background: "rgba(91, 251, 148, 1)",
@@ -184,7 +184,7 @@ const FooterTextsWrapper = () => {
           <Typography fontWeight={"bold"} fontSize={15}>
             Contact us
           </Typography>
-          <KeyboardArrowRightIcon
+          <KeyboardArrowRightRoundedIcon
             sx={{
               p: 0.1,
               background: "rgba(91, 251, 148, 1)",
@@ -237,8 +237,8 @@ const SocialIcon = ({ name }) => {
         outline: "1px solid #122038",
         borderRadius: 50,
         padding: name === "facebook" ? 12 : 15,
-        paddingRight: name === "facebook" ? 15 : 12,
-        paddingLeft: name === "facebook" ? 15 : 12,
+        paddingRight: 15,
+        paddingLeft: 15,
       }}
       component="img"
       image={`/images/${name}.png`}

@@ -3,7 +3,7 @@ import { Box, IconButton, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Flex from "../customMuiComponents/Flex";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import Grid from "@mui/material/Grid";
 export const FourthPage = () => {
   return (
@@ -91,7 +91,7 @@ const SectorImage = ({ name, text, top, left, bottom, right }) => {
             }}
           >
             {" "}
-            <KeyboardArrowRightIcon />{" "}
+            <KeyboardArrowRightRoundedIcon />{" "}
           </IconButton>
         </Flex>
       </Stack>

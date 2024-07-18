@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Flex from "../customMuiComponents/Flex";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import { SecondPage } from "./SecondPage";
 import { ThirdPage } from "./ThirdPage";
 import { FourthPage } from "./FourthPage";
@@ -178,8 +178,6 @@ const FirstPageWelcomeTextComponent = () => {
           borderRadius: 11,
           background:
             "linear-gradient(to right, rgba(242, 116, 5, 1), rgba(242, 218, 5, 1))",
-          // width: "300px",
-          outline: "2px solid black",
         }}
       >
         <Typography
@@ -261,7 +259,7 @@ const FirstPageFooter = () => {
           }}
         >
           {" "}
-          <KeyboardArrowRightIcon />{" "}
+          <KeyboardArrowRightRoundedIcon />{" "}
         </IconButton>
       </Flex>
       <CardMedia

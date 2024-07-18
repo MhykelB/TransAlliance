@@ -3,7 +3,8 @@ import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Flex from "../customMuiComponents/Flex";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 
 export const SecondPage = () => {
   return (
@@ -135,7 +136,7 @@ const PictureLine1 = () => {
           <Typography alignSelf={"flex-end"} fontWeight={"bold"} fontSize={20}>
             Money out
           </Typography>
-          <KeyboardArrowRightIcon
+          <KeyboardArrowRightRoundedIcon
             sx={{
               p: 0.3,
               background: "black",
@@ -194,12 +195,13 @@ const PictureLine2 = () => {
           columnGap: 7,
         }}
       >
-        <Stack gap={5}>
+        <Stack gap={0}>
           <PersonCardImage
             sx={{
               width: "300px",
               height: "300px",
-              background: "white",
+              background:
+                "linear-gradient(to left, rgba(242, 116, 5, 1), rgba(242, 218, 5, 1))",
               borderRadius: 5,
             }}
             cardsx={{
@@ -245,7 +247,7 @@ const PictureLine2 = () => {
         <Typography alignSelf={"flex-end"} fontWeight={"bold"} fontSize={20}>
           Learn More
         </Typography>
-        <KeyboardArrowRightIcon
+        <KeyboardArrowRightRoundedIcon
           sx={{
             p: 0.3,
             background: "rgba(91, 251, 148, 1)",
@@ -281,6 +283,36 @@ const PersonCardImage = ({
         ...sx,
       }}
     >
+      {name === "SEPA3" && (
+        <CardMedia
+          style={{
+            position: "absolute",
+            bottom: -100,
+            left: -50,
+            width: "300px",
+            overflow: "hidden",
+            height: "auto",
+            borderRadius: 15,
+            ...cardsx,
+          }}
+          component="img"
+          image={`/images/vector.png`}
+          alt={`${name}`}
+        />
+      )}
+      {(name === "SEPA3" || name === "SEPA4") && (
+        <ArrowForwardIcon
+          fontSize="medium"
+          sx={{
+            position: "absolute",
+            top: 20,
+            right: 20,
+            ml: "",
+            transform: "rotate(-45deg)",
+          }}
+        />
+      )}
+
       <CardMedia
         style={{
           width: width,
@@ -357,20 +389,16 @@ const Footer = () => {
             dedication to solving our customers’ most complex cross-border
             payments challenges.
           </Typography>
-          <Flex sx={{ ...buttonProps, py: 1, borderRadius: 2 }}>
-            <Typography
-              alignSelf={"flex-end"}
-              fontWeight={"bold"}
-              fontSize={20}
-            >
+          <Flex sx={{ ...buttonProps, py: 1, borderRadius: 3 }}>
+            <Typography alignSelf={"flex-end"} fontWeight={500} fontSize={20}>
               Learn More
             </Typography>
-            <KeyboardArrowRightIcon
+            <KeyboardArrowRightRoundedIcon
               sx={{
-                p: 0.3,
+                p: 0.1,
                 background: "black",
-                color: "#5AAF87",
-                borderRadius: 4,
+                color: "#31E876",
+                borderRadius: 8,
                 "&:hover": {
                   opacity: 0.6,
                   cursor: "pointer",
@@ -389,7 +417,7 @@ const Footer = () => {
           pl: 5,
           borderTopLeftRadius: "4rem",
           background:
-            "linear-gradient(to bottom right, rgba(93,103,84,1) 3%, rgba(20,35,60,1) 25%, rgba(20,35,60,1) 58%, rgba(20,35,60,1) 95%);",
+            "linear-gradient(to bottom right, rgba(93,103,84,1) 1%,rgba(93,103,84,1) 1%,rgba(20,35,60,1) 40%,  rgba(20,35,60,1) 58%, rgba(20,35,60,1) 95%);",
         }}
       >
         <CardMedia
