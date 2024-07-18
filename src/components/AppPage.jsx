@@ -64,8 +64,7 @@ const FirstPage = () => {
           <Button
             // variant="contained"
             sx={{
-              // width: "233px",
-              // height: "75px",
+              fontWeight: 600,
               borderRadius: 3,
               fontSize: 14,
               textTransform: "none",
@@ -126,7 +125,7 @@ const FirstPageWelcomeTextComponent = () => {
       }}
     >
       <Stack
-        gap={1}
+        gap={2}
         sx={{
           width: "600px",
         }}
@@ -144,11 +143,11 @@ const FirstPageWelcomeTextComponent = () => {
         </Typography>
         <Typography
           color={"rgba(255, 255, 255, 1)"}
-          fontFamily={"Exo"}
+          fontFamily={"Gayathri"}
           fontSize={"70px"}
           sx={{
             width: "580px",
-            lineHeight: 0.8,
+            lineHeight: 0.9,
           }}
         >
           We are the payments people
@@ -157,7 +156,7 @@ const FirstPageWelcomeTextComponent = () => {
           color={"rgba(220, 220, 220, 0.8)"}
           fontSize={"15px"}
           sx={{
-            mt: 2,
+            mt: -1,
             width: "440px",
           }}
         >

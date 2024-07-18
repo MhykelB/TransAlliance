@@ -58,7 +58,11 @@ const LadyAndForm = () => {
               alignItems: "flex-start",
             }}
           >
-            <Checkbox defaultChecked={false} sx={{ m: 0, p: 0 }} />
+            <Checkbox
+              color="primary"
+              defaultChecked={false}
+              sx={{ m: 0, p: 0 }}
+            />
             <Typography fontSize={12} width={440}>
               I agree to receiving payment news and trends from Inpay, including
               updates to our products and services. I am aware that I can
@@ -92,6 +96,11 @@ const LadyAndForm = () => {
                 p: 0.3,
                 background: "rgba(91, 251, 148, 1)",
                 borderRadius: 4,
+                "&:hover": {
+                  opacity: 0.8,
+                  cursor: "pointer",
+                  background: "rgba(242, 218, 5, 1)",
+                },
               }}
             />
           </Flex>
@@ -181,6 +190,11 @@ const FooterTextsWrapper = () => {
               p: 0.1,
               background: "rgba(91, 251, 148, 1)",
               borderRadius: 4,
+              "&:hover": {
+                opacity: 0.8,
+                cursor: "pointer",
+                background: "rgba(242, 218, 5, 1)",
+              },
             }}
           />
         </Flex>

@@ -8,7 +8,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const theme = createTheme({
   typography: {
-    fontFamily: ["DM Sans", "Exo", "sans-serif", "Gayathri"].join(","),
+    fontFamily: ["DM Sans", "Roboto", "Exo", "sans-serif", "Gayathri"].join(
+      ","
+    ),
     b1: {
       fontWeight: 400,
       fontSize: "0.5rem",
@@ -17,7 +19,7 @@ const theme = createTheme({
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: "#1958B8",
+      main: "#ffa726",
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
