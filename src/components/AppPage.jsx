@@ -10,7 +10,6 @@ import { SecondPage } from "./SecondPage";
 import { ThirdPage } from "./ThirdPage";
 import { FourthPage } from "./FourthPage";
 import { FifthPage } from "./FifthPage";
-import zIndex from "@mui/material/styles/zIndex";
 const AppPage = () => {
   return (
     <Box // mai wrapper

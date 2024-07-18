@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Checkbox, Divider, Stack, TextField } from "@mui/material";
+import { Checkbox, Divider, Stack, TextField } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Flex from "../customMuiComponents/Flex";

@@ -1,11 +1,9 @@
 import React from "react";
-import { Box, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Flex from "../customMuiComponents/Flex";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 export const ThirdPage = () => {
