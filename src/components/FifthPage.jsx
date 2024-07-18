@@ -74,7 +74,6 @@ const LadyAndForm = () => {
           <Flex
             sx={{
               width: "fit-content",
-
               columnGap: 4,
               background:
                 "linear-gradient(to left, rgba(36, 52, 62, .85), #5AAF87)",

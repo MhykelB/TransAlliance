@@ -10,6 +10,7 @@ export const ThirdPage = () => {
   return (
     <Stack
       sx={{
+        border: "2px solid black",
         pt: 10,
       }}
     >
@@ -47,7 +48,7 @@ const GreenIcon = ({ name, title, text, sx }) => {
         fontSize={14}
         sx={{
           mt: -1,
-          width: "19rem",
+          width: "20.2rem",
         }}
       >
         {text}
@@ -58,7 +59,9 @@ const GreenIcon = ({ name, title, text, sx }) => {
 const IconAndText = () => {
   return (
     <Stack gap={5} marginTop={6}>
-      <Typography>OUR SERVICE</Typography>
+      <Typography color={"#858585"} letterSpacing={2} fontWeight={700}>
+        OUR SERVICE
+      </Typography>
       <GreenIcon
         name={"image40"}
         title={"We are your trusted partners"}
@@ -95,11 +98,13 @@ const NoteAndImage = () => {
     <Stack>
       <Typography
         fontSize={44}
+        fontWeight={700}
+        fontFamily={"Gayathri"}
         sx={{
           lineHeight: 1.2,
         }}
       >
-        The TransAlliance Group. difference
+        The Transalliance Group. difference
       </Typography>
       <Typography color={"#757575"} fontSize={22} width={"36rem"}>
         Our global payments network is powered by passionate people, transparent
