@@ -10,6 +10,7 @@ import { SecondPage } from "./SecondPage";
 import { ThirdPage } from "./ThirdPage";
 import { FourthPage } from "./FourthPage";
 import { FifthPage } from "./FifthPage";
+import zIndex from "@mui/material/styles/zIndex";
 const AppPage = () => {
   return (
     <Box // mai wrapper
@@ -17,7 +18,6 @@ const AppPage = () => {
         overflow: "hidden",
         ml: "auto",
         mr: "auto",
-        outline: "2px solid green",
         width: "1250px",
         background: "#F5F5F5",
       }}
@@ -54,6 +54,7 @@ const FirstPage = ({}) => {
           sx={{
             columnGap: 4,
             ml: "auto",
+            zIndex: 1,
           }}
         >
           <NavBarItem text={"Home"} />
@@ -201,15 +202,16 @@ const FirstPageWelcomeTextComponent = ({}) => {
         />
         <CardMedia
           style={{
-            width: "400px",
+            width: "500px",
             height: "auto",
             position: "absolute",
             top: -180,
             left: -18,
+            zIndex: 0,
           }}
           component="img"
           image="/images/vector.png"
-          alt="Hug"
+          alt="vector"
         />
       </Box>
     </Flex>
