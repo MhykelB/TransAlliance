@@ -1,10 +1,9 @@
 import React from "react";
-import { Box, IconButton, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Flex from "../customMuiComponents/Flex";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { Padding } from "@mui/icons-material";
 
 export const SecondPage = () => {
   return (
