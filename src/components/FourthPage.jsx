@@ -143,7 +143,9 @@ const Footer = () => {
         outline: "1px solid green",
       }}
     >
-      <Typography fontSize={40}> 2023 Annual Report</Typography>
+      <Typography fontWeight={700} fontFamily={"Gayathri"} fontSize={40}>
+        2023 Annual Report
+      </Typography>
       <Typography
         color={"rgba(245, 245, 245, 1)"}
         textAlign={"center"}

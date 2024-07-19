@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -247,24 +247,33 @@ const Footer = () => {
       </Stack>
       <Stack
         sx={{
-          flex: 1,
+          flex: 0.8,
           pt: 6,
-          px: 5,
+          px: 4,
           pb: 3,
           background: "#5FB083",
         }}
       >
+        {" "}
         <Typography
-          fontSize={40}
-          width={305}
-          sx={{
-            lineHeight: 1.2,
-          }}
+          fontWeight={700}
+          fontFamily={"Gayathri"}
+          fontSize={38}
+          width={270}
         >
-          {" "}
-          One portal, every transaction{" "}
+          One portal,
         </Typography>
-        <Typography fontWeight={"bold"} fontSize={17} mt={1} maxWidth={320}>
+        <Typography
+          fontFamily={"Gayathri"}
+          fontWeight={700}
+          pt={0}
+          mt={-2}
+          fontSize={38}
+          width={500}
+        >
+          every transaction
+        </Typography>
+        <Typography fontWeight={500} fontSize={17} mt={0} maxWidth={355}>
           Our customer portal provides an intuitive interface to access all of
           our services via a simple, single login.
         </Typography>
@@ -282,7 +291,7 @@ const TextArray = [
 const BulletTexts = ({ array }) => {
   return TextArray.map((item) => {
     return (
-      <Flex sx={{ columnGap: 0, ml: 3 }} key={item}>
+      <Flex sx={{ columnGap: 0, ml: 1 }} key={item}>
         <FiberManualRecordIcon
           sx={{
             fontSize: "8px",
@@ -291,7 +300,7 @@ const BulletTexts = ({ array }) => {
           }}
         />
         <Typography
-          fontWeight={"bold"}
+          fontWeight={500}
           maxWidth={350}
           ml={1}
           fontSize={17}

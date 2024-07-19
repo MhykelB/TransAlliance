@@ -10,6 +10,7 @@ import { SecondPage } from "./SecondPage";
 import { ThirdPage } from "./ThirdPage";
 import { FourthPage } from "./FourthPage";
 import { FifthPage } from "./FifthPage";
+import zIndex from "@mui/material/styles/zIndex";
 const AppPage = () => {
   return (
     <Box // mai wrapper
@@ -254,13 +255,15 @@ const FirstPageFooter = () => {
           outline: "1.2px solid rgba(255, 255, 255, .6)",
           background: "rgba(138, 138, 138, 0.3)",
           backdropFilter: "blur(10px)",
-          py: 2,
+          py: 3,
           px: 6,
+          pr: 8,
           borderRadius: 3,
-          columnGap: 10,
+          columnGap: 14,
           position: "absolute",
-          top: -25,
-          left: "18%",
+          top: -35,
+          left: "12%",
+          zIndex: 2,
 
           // transform: translate("-50%", "-50%"),
         }}

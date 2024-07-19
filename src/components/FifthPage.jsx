@@ -143,7 +143,13 @@ const Footer = () => {
       }}
     >
       <FooterTextsWrapper />
-      <Divider orientation="horizontal" flexItem />
+      <Divider
+        orientation="horizontal"
+        flexItem
+        sx={{
+          mr: 8,
+        }}
+      />
       <FooterIcon />
     </Stack>
   );
@@ -281,12 +287,16 @@ const footerTextValues = [
   {
     title: "Solutions",
     textsArray: ["Money Out", "Money In"],
-    sx: {},
+    sx: {
+      fontWeight: 500,
+    },
   },
   {
     title: "Sectors",
     textsArray: ["Financial Services", "iGaming", "Corporates", "NGOs"],
-    sx: {},
+    sx: {
+      fontWeight: 500,
+    },
   },
   {
     title: "Other",
@@ -297,6 +307,8 @@ const footerTextValues = [
       "Careers",
       "Contact Us",
     ],
-    sx: {},
+    sx: {
+      fontWeight: 500,
+    },
   },
 ];
