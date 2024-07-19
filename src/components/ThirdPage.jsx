@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
