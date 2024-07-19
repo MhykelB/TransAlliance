@@ -11,12 +11,14 @@ export const ThirdPage = () => {
     <Stack
       sx={{
         pt: 10,
+        background:
+          "linear-gradient(to top right, rgba(255, 195, 43, .2) 0%, rgba(245,245,245,1) 40%)",
       }}
     >
       <Flex
         sx={{
           mx: 10,
-          columnGap: 15,
+          columnGap: 20,
           alignItems: "flex-start",
         }}
       >
@@ -120,6 +122,7 @@ const ImageGroup = ({ sx }) => {
         columnGap: 0,
         mt: 19,
         alignItems: "flex-start",
+        position: "relative",
       }}
     >
       <CardMedia
@@ -166,6 +169,38 @@ const ImageGroup = ({ sx }) => {
             }}
           />{" "}
         </Flex>
+        <Stack
+          sx={{
+            borderRadius: 5,
+            position: "absolute",
+            outline: "1.5px solid rgba(255, 255, 255, 1)",
+            background: "rgba(255, 255, 255, 0.7)",
+            backdropFilter: "blur(10px)",
+            py: 2,
+            px: 3.5,
+            top: 45,
+            left: -70,
+            zIndex: 1,
+          }}
+        >
+          <Typography
+            fontWeight={500}
+            letterSpacing={1}
+            fontSize={13}
+            color={"rgba(18, 32, 56, .4)"}
+          >
+            OUR TEAM
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: 20,
+              fontWeight: 600,
+              letterSpacing: 0.9,
+            }}
+          >
+            Over 200 Experts
+          </Typography>
+        </Stack>
       </Stack>
     </Flex>
   );

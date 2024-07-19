@@ -125,7 +125,7 @@ const FirstPageWelcomeTextComponent = () => {
       sx={{
         alignItems: "flex-start",
         mt: 12,
-        columnGap: 10,
+        columnGap: 8,
         ml: 20,
         mr: "aut0",
       }}
@@ -173,6 +173,7 @@ const FirstPageWelcomeTextComponent = () => {
       </Stack>
       <Box
         sx={{
+          mt: 0,
           position: "relative",
           pt: 10,
           borderRadius: 11,
@@ -182,22 +183,29 @@ const FirstPageWelcomeTextComponent = () => {
       >
         <Typography
           sx={{
+            fontSize: 15,
             fontWeight: 600,
-            letterSpacing: 0.9,
+            // letterSpacing: 0.9,
             borderRadius: 3,
             position: "absolute",
             outline: "1.5px solid rgba(255, 255, 255, 1)",
             background: "rgba(255, 255, 255, 0.7)",
             py: 2,
-            px: 1.5,
+            px: 1,
             top: 35,
-            left: -80,
+            left: -65,
+            zIndex: 2,
           }}
         >
           24/7, 365 transaction tracking
         </Typography>
         <CardMedia
-          style={{ width: "300px", height: "auto", position: "relative" }}
+          style={{
+            width: "300px",
+            height: "auto",
+            position: "relative",
+            zIndex: 1,
+          }}
           component="img"
           image="/images/laptop.png"
           alt="Hug"
@@ -227,6 +235,20 @@ const FirstPageFooter = () => {
         position: "relative",
       }}
     >
+      <Box
+        sx={{
+          position: "absolute",
+          width: 150,
+          height: 8,
+          background: "#32B477",
+          px: 10,
+          transform: "rotate(-40deg)",
+          right: 300,
+          top: -42,
+          zIndex: 0,
+        }}
+      ></Box>
+
       <Flex
         sx={{
           outline: "1.2px solid rgba(255, 255, 255, .6)",
@@ -268,7 +290,8 @@ const FirstPageFooter = () => {
           height: "auto",
           ml: 10,
           borderTopRightRadius: 60,
-          background: "rgba(90, 176, 136, 0.8)",
+          background: "rgba(90, 176, 136, 1)",
+          zIndex: 1,
         }}
         component="img"
         image="/images/paper-plane.png"

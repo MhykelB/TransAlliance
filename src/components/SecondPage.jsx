@@ -11,8 +11,8 @@ export const SecondPage = () => {
     <Box
       sx={{
         background:
-          "linear-gradient(to top left, rgba(91,251,148,1) 0%, rgba(245,245,245,1) 40%)",
-        pt: 18,
+          "linear-gradient(to top left, rgba(91,251,148,0.2) 20%, rgba(245,245,245,1) 40%)",
+        pt: 25,
         zIndex: 1,
         position: "relative",
       }}
@@ -53,7 +53,7 @@ const SecondPagePartnersIcon = () => {
         position: "absolute",
         background: "rgba(255, 255, 255, 0.7)",
         backdropFilter: "blur(10px)",
-        top: -150,
+        top: -100,
         left: 76,
         px: 4,
         py: 4,
@@ -167,6 +167,7 @@ const PictureLine1 = () => {
         bottom={-40}
         left={-50}
         sx={{
+          zIndex: 1,
           ml: "auto",
           mr: 6,
           textAlign: "start",
@@ -195,9 +196,23 @@ const PictureLine2 = () => {
           columnGap: 7,
         }}
       >
-        <Stack gap={0}>
+        <Stack gap={0} position={"relative"}>
+          <Box
+            sx={{
+              position: "absolute",
+              width: 70,
+              height: 6,
+              background: "#32B477",
+              px: 10,
+              transform: "rotate(-42deg)",
+              right: -160,
+              top: -42,
+              zIndex: 0,
+            }}
+          ></Box>
           <PersonCardImage
             sx={{
+              zIndex: 1,
               width: "300px",
               height: "300px",
               background:
